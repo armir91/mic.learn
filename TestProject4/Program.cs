@@ -15,7 +15,7 @@ int[] studentScores = new int[10];
 string currentStudentLetterGrade = "";
 
 // Write the Report Header to the console
-Console.WriteLine("Student\t\tGrade\n");
+Console.WriteLine("Student\t\tExam Score\t\tOverall\tGrade\tExtra Credit\n");
 
 foreach (string name in studentNames)
 {
@@ -35,9 +35,12 @@ foreach (string name in studentNames)
 
     // initialize/reset the sum of scored assignments
     int sumAssignmentScores = 0;
+    int studentExamScore = 0;
 
     // initialize/reset the calculated average of exam + extra credit scores
     decimal currentStudentGrade = 0;
+    int studentExtraCredit = 0;
+    int impactScore = 0;
 
     // initialize/reset a counter for the number of assignment 
     int gradedAssignments = 0;
@@ -58,6 +61,9 @@ foreach (string name in studentNames)
     }
 
     currentStudentGrade = (decimal)(sumAssignmentScores) / examAssignments;
+
+    
+
 
     if (currentStudentGrade >= 97)
         currentStudentLetterGrade = "A+";
@@ -99,7 +105,7 @@ foreach (string name in studentNames)
         currentStudentLetterGrade = "F";
 
     //Console.WriteLine("Student\t\tGrade\tLetter Grade\n");
-    Console.WriteLine($"{currentStudent}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}");
+    Console.WriteLine($"{currentStudent}\t\t{studentExamScore}\t\t\t{currentStudentGrade}\t{currentStudentLetterGrade}\t{studentExtraCredit} ({impactScore} pts)");
 }
 
 // required for running in VS Code (keeps the Output windows open to view results)
