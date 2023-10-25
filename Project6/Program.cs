@@ -56,10 +56,10 @@ for (int i = 0; i < maxPets; i++)
         case 3:
             animalSpecies = "cat";
             animalID = "c4";
-            animalAge = "?";
-            animalPhysicalDescription = "";
-            animalPersonalityDescription = "";
-            animalNickname = "";
+            animalAge = "3";
+            animalPhysicalDescription = "Medium sized, long hair, yellow, female, about 10 pounds. Uses litter box.";
+            animalPersonalityDescription = "A people loving cat that likes to sit on your lap.";
+            animalNickname = "Lion";
 
             break;
 
